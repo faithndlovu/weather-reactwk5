@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Weather from "./Weather";
+import  "./Weather.css";
 
-function App() {
+function App() {  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+     <Weather/>
+     <footer>This project was coded by <a href="/" target="_blank">Faith L Ndlovu 
+      </a>
+      and is <a href="/"  target="_blank">open sourced on Github
         </a>
-      </header>
+      </footer>
     </div>
   );
 }

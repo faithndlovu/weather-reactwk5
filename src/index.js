@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import 'bootstrap/dist/css/bootstrap.css';
 import reportWebVitals from './reportWebVitals';
+import Weather from "./Weather";
+import "./Weather.css";
+import './App.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+   <Weather/>
+   <footer>This project was coded by <a href="" target="_blank">Faith L Ndlovu 
+      </a>
+       and is <a href=""  target="_blank">open sourced on Github
+        </a>
+      </footer>
   </React.StrictMode>
 );
 
