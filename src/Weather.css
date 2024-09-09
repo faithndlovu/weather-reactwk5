@@ -1,11 +1,12 @@
-.Weather{
+ .Weather{
     font-family: ariel, sans-serif;
     color:rgb(135, 135, 135);
-    padding: 16px;
+    padding: 26px;
     margin: 30px auto;
     border-radius: 4px;
     max-width: 700px;
     border: 1px solid #dadde1;
+
 }
 .Weather form{
     margin-bottom: 20px;
@@ -31,11 +32,22 @@
     list-style: none;
 
 }
-.Weather img{
+.Weather img {
     height: 64px;
-    display: inline-block;
+    display: inline-flex;
     margin-right: 10px;
     width: 64px;
+
+}
+
+.clearfix {
+color: rgb(31, 31, 31);
+display:flex;
+font-family: Arial, sans-serif;
+font-size: 16px;
+font-weight: 400;
+height: 60px;
+width: 326px;
 
 }
 
@@ -55,10 +67,11 @@
     position: relative;
     line-height:1;
     top: -34px;
-    margin-left: 5px;
+   
 }
 
-.index footer{
+.foot{
+    text-align: center;
     font-size: 12px;
     margin: 10px 0;
   }
