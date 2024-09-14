@@ -32,12 +32,9 @@
     list-style: none;
 
 }
-.Weather img {
-    height: 64px;
+.Weather canvas{
     display: inline-flex;
     margin-right: 10px;
-    width: 64px;
-
 }
 
 .clearfix {
