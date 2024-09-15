@@ -18,7 +18,7 @@ setWeatherData({
     description: response.data.weather[0].description,
     icon: response.data.weather[0].icon,
     wind: response.data.wind.speed,
-    cityName: response.data.name,
+    city: response.data.name,
 });
     }
 
