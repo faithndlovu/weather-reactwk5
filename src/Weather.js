@@ -7,7 +7,7 @@ import "./App.css";
 export default function Weather(props){
 
     const [weatherData, setWeatherData]= useState({ready: false});
-    const [city, setCity]= useState(props.defaultCity);
+    const [cityName, setCity]= useState(props.defaultCity);
    
     function handleResponse(response){
 setWeatherData({
@@ -18,13 +18,13 @@ setWeatherData({
     description: response.data.weather[0].description,
     icon: response.data.weather[0].icon,
     wind: response.data.wind.speed,
-    city: response.data.name
+    cityName: response.data.name
 });
 
 }
 function search(){
     const apikey ="281450ec88936f4fa8ee9864682b49a0";
-    let apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
+    let apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apikey}&units=metric`;
     axios.get(apiurl).then(handleResponse);
 
 }
