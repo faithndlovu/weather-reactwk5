@@ -23,8 +23,8 @@ setWeatherData({
 
 }
 function search(){
-    const apikey ="281450ec88936f4fa8ee9864682b49a0";
-    let apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apikey}&units=metric`;
+    const apikey ="a3739c77d5b9d0b613e5cf74c39c86d0";
+    let apiurl = `https://openweathermap.org/data/2.5/weather?q=${cityName}}&appid=${apikey}&units=metric`;
     axios.get(apiurl).then(handleResponse);
 
 }
@@ -51,7 +51,7 @@ if (weatherData.ready){
                 <input type="search" 
                 placeholder="Enter a city..."
                  className="form-control" autoFocus="on"
-                 onChange={handleChangeCity}/>
+                 onChange={handleChangeCity} value={cityName}/>
                 </div>
                 <div className="col-3">
                 <input type="submit" 
@@ -67,6 +67,6 @@ if (weatherData.ready){
 } else{
  search();   
   return "loading!...";
-
+  
 }
 }
