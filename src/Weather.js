@@ -20,14 +20,7 @@ setWeatherData({
     wind: response.data.wind.speed,
     cityName: response.data.name
 });
-
-}
-function search(){
-    const apikey ="a3739c77d5b9d0b613e5cf74c39c86d0";
-    let apiurl = `https://openweathermap.org/data/2.5/weather?q=${cityName}}&appid=${apikey}&units=metric`;
-    axios.get(apiurl).then(handleResponse);
-
-}
+    }
 
 function handleSubmit(event) {
     event.preventDefault();
@@ -37,6 +30,14 @@ function handleSubmit(event) {
 
 function handleChangeCity(event){
 setCity(event.target.value);
+
+
+
+}
+function search(){
+    const apikey ="e8b0638cd8860cffe67dcb53673a4042";
+    let apiUrl = `https://openweathermap.org/data/2.5/weather?q=${cityName}}&appid=${apikey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
 
 }
 
@@ -51,7 +52,7 @@ if (weatherData.ready){
                 <input type="search" 
                 placeholder="Enter a city..."
                  className="form-control" autoFocus="on"
-                 onChange={handleChangeCity} value={cityName}/>
+                 onChange={handleChangeCity} />
                 </div>
                 <div className="col-3">
                 <input type="submit" 
@@ -69,4 +70,4 @@ if (weatherData.ready){
   return "loading!...";
   
 }
-}
+    }
