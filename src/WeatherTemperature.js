@@ -6,12 +6,13 @@ export default function WeatherTemperature(props){
     event.preventDefault();
     setUnit("fahrenheit");
    }
+
 function showCelsius(event){
     event.preventDefault();
     setUnit("celsius")
 }
 
-   if (unit==="celsiuus"){
+   if (unit==="celsius"){
    
     return(
         <div className="WeatherTemperature">
