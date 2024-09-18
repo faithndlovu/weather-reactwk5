@@ -4,8 +4,8 @@ import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function WeatherForecast(props){
-    let [loaded,setLoaded]=useState(false);
-    let [forecast,setForecast]=useState(null);
+    let [loaded, setLoaded]=useState(false);
+    let [forecast, setForecast]=useState(null);
  
     useEffect (() =>{
         setLoaded(false);
@@ -19,10 +19,10 @@ export default function WeatherForecast(props){
     }
 
    function load(){
-    let apikey="a3739c77d5b9d0b613e5cf74c39c86d0";
+    let apikey="e8b0638cd8860cffe67dcb53673a4042";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
-    let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&appid=${apikey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apikey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
 
@@ -36,7 +36,7 @@ if (loaded){
                     if (index < 6){
                     return(
                 <div className="col" key={index}>
-                <WeatherForecastDay data={dailyForecast}/>
+                <WeatherForecastDay data={dailyForecast} />
                 </div>
                 );
             } else {
